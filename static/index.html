@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriApp - Gestión de Pacientes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Consultorio Nutricional</h1>
+            <p>Panel local de pacientes</p>
+        </header>
+
+        <div class="grid">
+            <!-- Formulario de Alta -->
+            <section class="card">
+                <h2>Nuevo Paciente</h2>
+                <form id="pacienteForm">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                    <input type="number" id="edad" placeholder="Edad" required>
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                    <input type="text" id="telefono" placeholder="Teléfono">
+                    <textarea id="objetivo" placeholder="Objetivo nutricional / Observaciones"></textarea>
+                    <button type="submit">Guardar Paciente</button>
+                </form>
+            </section>
+
+            <!-- Listado -->
+            <section class="card">
+                <h2>Listado de Pacientes</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nombre y Apellido</th>
+                                <th>Edad</th>
+                                <th>Contacto</th>
+                                <th>Objetivo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaPacientes">
+                            <!-- Se llena dinámicamente con JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
